@@ -11,8 +11,8 @@
         <slot name="modal-body"><div class="modal-body"><slot></slot></div></slot>
         <slot name="modal-footer">
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" @click="action(false,3)">{{ cancelText }}</button>
-            <button type="button" class="btn btn-primary" @click="action(true,4)">{{ okText }}</button>
+            <button v-if="cancelText" type="button" class="btn btn-default" @click="action(false,3)">{{ cancelText }}</button>
+            <button v-if="okText" type="button" class="btn btn-primary" @click="action(true,4)">{{ okText }}</button>
           </div>
         </slot>
       </div>
